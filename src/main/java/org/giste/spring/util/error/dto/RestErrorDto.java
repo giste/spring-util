@@ -75,4 +75,10 @@ public class RestErrorDto implements Serializable {
 	public void addFieldError(FieldErrorDto fieldError) {
 		fieldErrorList.add(fieldError);
 	}
+
+	@Override
+	public String toString() {
+		return "RestErrorDto [status=" + status + ", code=" + code + ", message=" + message + ", developerInfo="
+				+ developerInfo + ", fieldErrorList=" + fieldErrorList + "]";
+	}
 }

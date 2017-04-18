@@ -48,4 +48,9 @@ public class FieldErrorDto implements Serializable {
 		this.message = message;
 	}
 
+	@Override
+	public String toString() {
+		return "FieldErrorDto [field=" + field + ", message=" + message + "]";
+	}
+
 }
