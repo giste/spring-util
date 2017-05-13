@@ -43,18 +43,38 @@ public class RestErrorDto implements Serializable {
 		this.developerInfo = developerInfo;
 	}
 
+	/**
+	 * Gets the HTTP status of this error.
+	 * 
+	 * @return The HTTP status of this error.
+	 */
 	public HttpStatus getStatus() {
 		return status;
 	}
 
+	/**
+	 * Gets the code of this error.
+	 * 
+	 * @return The code of this error.
+	 */
 	public String getCode() {
 		return code;
 	}
 
+	/**
+	 * Gets the user message of this error.
+	 * 
+	 * @return The code of this error.
+	 */
 	public String getMessage() {
 		return message;
 	}
 
+	/**
+	 * Gets the developer info of this error.
+	 * 
+	 * @return The developer info of this error.
+	 */
 	public String getDeveloperInfo() {
 		return developerInfo;
 	}
@@ -63,6 +83,11 @@ public class RestErrorDto implements Serializable {
 		return fieldErrorList;
 	}
 
+	/**
+	 * Sets the field error list of this error.
+	 * 
+	 * @param fieldErrorList The field error list of this error.
+	 */
 	public void setFieldErrorList(List<FieldErrorDto> fieldErrorList) {
 		this.fieldErrorList = fieldErrorList;
 	}

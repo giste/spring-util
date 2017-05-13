@@ -32,18 +32,38 @@ public class FieldErrorDto implements Serializable {
 		this.message = message;
 	}
 
+	/**
+	 * Gets the field bound to this error.
+	 * 
+	 * @return The name of the field bound to this error.
+	 */
 	public String getField() {
 		return field;
 	}
 
+	/**
+	 * Sets the field bound to this error.
+	 * 
+	 * @param field The name of the field bound to this error.
+	 */
+	public void setField(String field) {
+		this.field = field;
+	}
+	
+	/**
+	 * Gets the message of this error.
+	 * 
+	 * @return The message of this error.
+	 */
 	public String getMessage() {
 		return message;
 	}
 
-	public void setField(String field) {
-		this.field = field;
-	}
-
+	/**
+	 * Sets the message for this error.
+	 * 
+	 * @param message The message of this error.
+	 */
 	public void setMessage(String message) {
 		this.message = message;
 	}
