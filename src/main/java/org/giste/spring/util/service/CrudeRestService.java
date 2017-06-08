@@ -5,6 +5,14 @@ import java.util.List;
 import org.giste.spring.util.service.exception.EntityNotFoundException;
 import org.giste.util.dto.NonRemovableDto;
 
+/**
+ * Base interface for services that communicate with REST servers and performs
+ * CRUDE operations on the entity managed by them.
+ * 
+ * @author Giste
+ *
+ * @param <DTO> The DTO of the managed entity.
+ */
 public interface CrudeRestService<DTO extends NonRemovableDto> {
 
 	/**
