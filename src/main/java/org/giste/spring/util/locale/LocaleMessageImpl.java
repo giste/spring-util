@@ -19,6 +19,11 @@ public class LocaleMessageImpl implements LocaleMessage {
 
 	private MessageSource messageSource;
 
+	/**
+	 * Creates a new LocaleMessageImpl with a given MessageSource.
+	 * 
+	 * @param messageSource The MessageSource to use.
+	 */
 	public LocaleMessageImpl(MessageSource messageSource) {
 		this.messageSource = messageSource;
 	}

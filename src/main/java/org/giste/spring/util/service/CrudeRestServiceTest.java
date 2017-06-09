@@ -36,7 +36,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * Base test class for services accessing REST CRUDE controllers.
  * 
- * Subclasses hava to implement the following methods:
+ * Subclasses have to implement the following methods:
  * <ul>
  * <li>{@link #getRestService(RestTemplate, RestPropertiesImpl)} to get the service under testing.</li>
  * <li>{@link #getEmptyDtoArray(int)} to get and empty array of given size of type DTO.</li>

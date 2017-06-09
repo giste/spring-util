@@ -7,7 +7,15 @@ import org.giste.util.dto.NonRemovableDto;
 
 /**
  * Base interface for services that communicate with REST servers and performs
- * CRUDE operations on the entity managed by them.
+ * CRUDE operations on the entity managed by them. It has the following methods:
+ * <ul>
+ * <li>{@link #findAll()} to get a list of all entities.</li>
+ * <li>{@link #findById(long)} to get a single entity.</li>
+ * <li>{@link #create(NonRemovableDto)} to create a new entity.</li>
+ * <li>{@link #update(NonRemovableDto)} to update a single entity.</li>
+ * <li>{@link #enable(long)} to enable a single entity.</li>
+ * <li>{@link #disable(long)} to disable a single entity.</li>
+ * </ul>
  * 
  * @author Giste
  *
