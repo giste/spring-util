@@ -20,17 +20,17 @@ import org.springframework.web.util.UriComponentsBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
- * Base implementation class for services that performs CRUDE operations with a REST server.
- * Subclasses have to implement the following methods:
+ * Base implementation class for services that performs CRUDE operations with a
+ * REST server. Subclasses have to implement the following methods:
  * <ul>
  * <li>{@link #getDtoType()} to provide the type of the DTO.</li>
  * <li>{@link #getArrayType()} to provide the type of a DTO array.</li>
- * <li>{@link #getBasePath()} to provide the base path of actions at REST server for the
- * entity managed by this service.</li>
- * <li>{@link #handleHttpStatusConflict(RestErrorDto)} to handle responses from REST server with
- * status CONFLICT.</li>
+ * <li>{@link #getBasePath()} to provide the base path of actions at REST server
+ * for the entity managed by this service.</li>
+ * <li>{@link #handleHttpStatusConflict(RestErrorDto)} to handle responses from
+ * REST server with status CONFLICT.</li>
  * </ul>
- *  
+ * 
  * @author Giste
  *
  * @param <DTO> The DTO of the entity to be managed by this service.
@@ -71,8 +71,8 @@ public abstract class CrudeRestServiceImpl<DTO extends NonRemovableDto> implemen
 	/**
 	 * Constructs an <code>UriComponentsBuilder</code> with the properties to
 	 * communicate with the REST service. Scheme, host, port and base path for
-	 * all requests are read from <code>RestPropertiesImpl</code>. Only the path for
-	 * the entity should be added.
+	 * all requests are read from <code>RestPropertiesImpl</code>. Only the path
+	 * for the entity should be added.
 	 * 
 	 * @return The <code>UriComponentsBuilder</code> with the properties to
 	 *         communicate with the REST service.
@@ -125,8 +125,8 @@ public abstract class CrudeRestServiceImpl<DTO extends NonRemovableDto> implemen
 	 * Gets the <code>RestPropertiesImpl</code> with data for accessing the REST
 	 * service.
 	 * 
-	 * @return The <code>RestPropertiesImpl</code> with data for accessing the REST
-	 *         service.
+	 * @return The <code>RestPropertiesImpl</code> with data for accessing the
+	 *         REST service.
 	 */
 	protected RestProperties getRestProperties() {
 		return restPropertiesImpl;

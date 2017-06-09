@@ -1,8 +1,8 @@
 package org.giste.spring.util.config;
 
 /**
- * Interface for getting access to REST server properties. It has getters
- * for the different properties needed to identify the REST server.
+ * Interface for getting access to REST server properties. It has getters for
+ * the different properties needed to identify the REST server.
  * 
  * @author Giste
  */
@@ -10,7 +10,7 @@ public interface RestProperties {
 
 	/**
 	 * Gets the scheme of the REST server (usually HTTP).
-	 *  
+	 * 
 	 * @return The scheme of the REST server.
 	 */
 	String getScheme();
@@ -18,7 +18,7 @@ public interface RestProperties {
 	/**
 	 * Gets the host part of the URI of the REST server.
 	 * 
-	 * @return The host name. 
+	 * @return The host name.
 	 */
 	String getHost();
 

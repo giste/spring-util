@@ -4,7 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
- * Exception thrown when an entity is not found when looked up by its identifier.
+ * Exception thrown when an entity is not found when looked up by its
+ * identifier.
  * 
  * @author Giste
  */

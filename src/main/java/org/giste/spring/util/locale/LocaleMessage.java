@@ -24,7 +24,7 @@ public interface LocaleMessage {
 	 * @return The localized message.
 	 */
 	String getMessage(String id);
-	
+
 	/**
 	 * Retrieves a localized message from a MessageSourceResolvable.
 	 * 

@@ -18,9 +18,9 @@ public class FieldErrorDto implements Serializable {
 	 * Default constructor with no arguments.
 	 */
 	public FieldErrorDto() {
-		
+
 	}
-	
+
 	/**
 	 * Constructs a new validation error for a field.
 	 * 
@@ -49,7 +49,7 @@ public class FieldErrorDto implements Serializable {
 	public void setField(String field) {
 		this.field = field;
 	}
-	
+
 	/**
 	 * Gets the message of this error.
 	 * 

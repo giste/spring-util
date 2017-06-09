@@ -38,18 +38,21 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * 
  * Subclasses have to implement the following methods:
  * <ul>
- * <li>{@link #getRestService(RestTemplate, RestPropertiesImpl)} to get the service under testing.</li>
- * <li>{@link #getEmptyDtoArray(int)} to get and empty array of given size of type DTO.</li>
- * <li>{@link #getErrorForInvalidDto()} to get the <code>RestErrorDto</code> returned when
- * calling REST server with an invalid DTO.</li>
+ * <li>{@link #getRestService(RestTemplate, RestPropertiesImpl)} to get the
+ * service under testing.</li>
+ * <li>{@link #getEmptyDtoArray(int)} to get and empty array of given size of
+ * type DTO.</li>
+ * <li>{@link #getErrorForInvalidDto()} to get the <code>RestErrorDto</code>
+ * returned when calling REST server with an invalid DTO.</li>
  * <li>{@link #getNewDto()} to get a DTO for testing.</li>
- * <li>{@link #getServiceBasePath()} to get the base path for calls to REST server.</li>
+ * <li>{@link #getServiceBasePath()} to get the base path for calls to REST
+ * server.</li>
  * </ul>
  * 
  * Subclasses should override the following methods:
  * <ul>
- * <li>{@link #checkProperties(NonRemovableDto, NonRemovableDto)} to check that the properties
- * of a DTO matches the ones of a target DTO.</li>
+ * <li>{@link #checkProperties(NonRemovableDto, NonRemovableDto)} to check that
+ * the properties of a DTO matches the ones of a target DTO.</li>
  * </ul>
  * 
  * @author Giste
@@ -237,15 +240,17 @@ public abstract class CrudeRestServiceTest<DTO extends NonRemovableDto> {
 
 	/**
 	 * Gets the service to test. Subclasses has to return the service to test
-	 * created with the RestTemplate and RestPropertiesImpl passed as parameters.
+	 * created with the RestTemplate and RestPropertiesImpl passed as
+	 * parameters.
 	 * 
 	 * @param restTemplate RestTemplate used by the service to communicate with
 	 *            REST server.
-	 * @param restPropertiesImpl RestPropertiesImpl used by the service to know the REST
-	 *            server address.
+	 * @param restPropertiesImpl RestPropertiesImpl used by the service to know
+	 *            the REST server address.
 	 * @return The created service to test.
 	 */
-	protected abstract CrudeRestService<DTO> getRestService(RestTemplate restTemplate, RestProperties restPropertiesImpl);
+	protected abstract CrudeRestService<DTO> getRestService(RestTemplate restTemplate,
+			RestProperties restPropertiesImpl);
 
 	/**
 	 * Gets the <code>RestErrorDto</code> returned when testing for actions with
