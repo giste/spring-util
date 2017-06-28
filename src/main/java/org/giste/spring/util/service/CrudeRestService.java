@@ -1,7 +1,5 @@
 package org.giste.spring.util.service;
 
-import java.util.List;
-
 import org.giste.spring.util.service.exception.EntityNotFoundException;
 import org.giste.util.dto.NonRemovableDto;
 
@@ -21,40 +19,7 @@ import org.giste.util.dto.NonRemovableDto;
  *
  * @param <DTO> The DTO of the managed entity.
  */
-public interface CrudeRestService<DTO extends NonRemovableDto> {
-
-	/**
-	 * Retrieves all items.
-	 * 
-	 * @return List populated with existing items in the application.
-	 */
-	List<DTO> findAll();
-
-	/**
-	 * Retrieves one item by its identifier.
-	 * 
-	 * @param id Identifier for the looked up item.
-	 * @return DTO with the retrieved club.
-	 * @throws EntityNotFoundException If the entity to find does not exist.
-	 */
-	DTO findById(long id) throws EntityNotFoundException;
-
-	/**
-	 * Creates a new item in the application.
-	 * 
-	 * @param dto DTO with the data for the new item.
-	 * @return DTO of the created item.
-	 */
-	DTO create(DTO dto);
-
-	/**
-	 * Updates the data of an existing club.
-	 * 
-	 * @param dto DTO with the data of the club to update.
-	 * @return DTO of the updated entity.
-	 * @throws EntityNotFoundException If the entity to update does not exist.
-	 */
-	DTO update(DTO dto) throws EntityNotFoundException;
+public interface CrudeRestService<DTO extends NonRemovableDto> extends BaseRestService<DTO> {
 
 	/**
 	 * Disables a club in the application. It's data won't be accessible.
