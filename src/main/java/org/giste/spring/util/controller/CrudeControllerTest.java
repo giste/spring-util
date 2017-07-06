@@ -191,7 +191,7 @@ public abstract class CrudeControllerTest<DTO extends NonRemovableDto> extends B
 	}
 
 	/**
-	 * Gets the path for the enable action in a single entity. it's
+	 * Gets the path for the enable action in a single entity. It's
 	 * <code>"/entity/{id}/enable"</code>.
 	 * 
 	 * @return The path for the enable action.
@@ -201,7 +201,7 @@ public abstract class CrudeControllerTest<DTO extends NonRemovableDto> extends B
 	}
 
 	/**
-	 * Gets the path for the disable action in a single entity. it's
+	 * Gets the path for the disable action in a single entity. It's
 	 * <code>"/entity/{id}/disable"</code>.
 	 * 
 	 * @return The path for the disable action.

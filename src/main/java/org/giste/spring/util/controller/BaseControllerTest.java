@@ -6,7 +6,6 @@ import static org.hamcrest.Matchers.hasProperty;
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.anyLong;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.verifyZeroInteractions;
@@ -228,13 +227,14 @@ public abstract class BaseControllerTest<DTO extends BaseDto> {
 	 * @throws Exception If there is an error calling the controller.
 	 */
 	@Test
-	public void findByIdClubNotFound() throws Exception {
-		when(getMockService().findById(anyLong())).thenThrow(new EntityNotFoundException("message"));
+	public void findByIdEntityNotFound() throws Exception {
+		final Long id = 1L;
+		when(getMockService().findById(id)).thenThrow(new EntityNotFoundException("message"));
 
-		mockMvc.perform(get(pathId, 1L))
+		mockMvc.perform(get(pathId, id))
 				.andExpect(status().isNotFound());
 
-		verify(getMockService()).findById(1L);
+		verify(getMockService()).findById(id);
 		verifyNoMoreInteractions(getMockService());
 	}
 
@@ -423,7 +423,7 @@ public abstract class BaseControllerTest<DTO extends BaseDto> {
 	 * @throws Exception If there is an error calling the controller.
 	 */
 	@Test
-	public void updateClubNotFound() throws Exception {
+	public void updateEntityNotFound() throws Exception {
 		DTO dto = getNewDto();
 
 		when(getMockService().update(any(getDtoType()))).thenThrow(new EntityNotFoundException("message"));
