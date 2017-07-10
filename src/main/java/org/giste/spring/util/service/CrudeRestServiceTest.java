@@ -163,7 +163,7 @@ public abstract class CrudeRestServiceTest<DTO extends NonRemovableDto> extends 
 	 * @throws Exception If there is an error with ObjectMapper.
 	 */
 	@Test
-	public void testEnableClubNotFound() throws Exception {
+	public void testEnableEntityNotFound() throws Exception {
 		final RestErrorDto error = new RestErrorDto(HttpStatus.NOT_FOUND, "0", "Message", "Developer info");
 		final Long id = 1L;
 
@@ -224,7 +224,7 @@ public abstract class CrudeRestServiceTest<DTO extends NonRemovableDto> extends 
 	 * @throws Exception If there is an error with ObjectMapper.
 	 */
 	@Test
-	public void testDisableClubNotFound() throws Exception {
+	public void testDisableEntityNotFound() throws Exception {
 		final RestErrorDto error = new RestErrorDto(HttpStatus.NOT_FOUND, "0", "Message", "Developer info");
 		final Long id = 1L;
 

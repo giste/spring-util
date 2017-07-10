@@ -299,23 +299,23 @@ public abstract class BaseRestServiceTest<DTO extends BaseDto> {
 		dto1.setId(1L);
 		final DTO dto2 = getNewDto();
 		dto2.setId(2L);
-		final DTO[] clubs = getEmptyDtoArray(2);
+		final DTO[] dtoList = getEmptyDtoArray(2);
 
-		clubs[0] = dto1;
-		clubs[1] = dto2;
+		dtoList[0] = dto1;
+		dtoList[1] = dto2;
 
 		final UriComponents uri = uriBuilder.path(pathBase).build();
 
 		mockServer.expect(requestTo(uri.toUriString()))
 				.andExpect(method(HttpMethod.GET))
 				// .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
-				.andRespond(withSuccess(objectMapper.writeValueAsBytes(clubs), MediaType.APPLICATION_JSON_UTF8));
+				.andRespond(withSuccess(objectMapper.writeValueAsBytes(dtoList), MediaType.APPLICATION_JSON_UTF8));
 
 		List<DTO> readDtoList = service.findAll();
 
 		mockServer.verify();
 
-		assertThat(readDtoList.size(), is(clubs.length));
+		assertThat(readDtoList.size(), is(dtoList.length));
 		checkProperties(readDtoList.get(0), dto1);
 		checkProperties(readDtoList.get(1), dto2);
 	}
@@ -387,7 +387,7 @@ public abstract class BaseRestServiceTest<DTO extends BaseDto> {
 	 * @throws Exception If there is an error with ObjectMapper.
 	 */
 	@Test
-	public void testFindByIdClubNotFound() throws Exception {
+	public void testFindByIdEntityNotFound() throws Exception {
 		RestErrorDto error = new RestErrorDto(HttpStatus.NOT_FOUND, "10001001", "Message", "Developer info");
 
 		final UriComponents uri = uriBuilder.path(pathId).buildAndExpand(1);
@@ -477,7 +477,7 @@ public abstract class BaseRestServiceTest<DTO extends BaseDto> {
 	 * @throws Exception If there is an error with ObjectMapper.
 	 */
 	@Test
-	public void testUpdateClubNotFound() throws Exception {
+	public void testUpdateEntityNotFound() throws Exception {
 		final RestErrorDto error = new RestErrorDto(HttpStatus.NOT_FOUND, "0", "Message", "Developer info");
 		final DTO dto = getNewDto();
 

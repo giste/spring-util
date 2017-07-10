@@ -112,7 +112,7 @@ public abstract class CrudeControllerTest<DTO extends NonRemovableDto> extends B
 	 * @throws Exception If there is an error calling the controller.
 	 */
 	@Test
-	public void disableClubNotFound() throws Exception {
+	public void disableEntityNotFound() throws Exception {
 		DTO dto = getNewDto();
 		dto.setEnabled(false);
 
@@ -169,7 +169,7 @@ public abstract class CrudeControllerTest<DTO extends NonRemovableDto> extends B
 	 * @throws Exception If there is an error calling the controller.
 	 */
 	@Test
-	public void enableClubNotFound() throws Exception {
+	public void enableEntityNotFound() throws Exception {
 		DTO dto = getNewDto();
 		dto.setEnabled(true);
 
